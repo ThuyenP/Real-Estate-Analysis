@@ -58,3 +58,23 @@ At first glance, this data includes:
   ```
   SELECT COUNT(*) as typeNum, property_type FROM sales_listing GROUP BY property_type ORDER BY typeNum;
   ```
+* The maximum sales ratio by town is 7.18% in Morris, CT
+  The minimum sales ratio by town is 0.79%  in Woodbridge, CT
+  ```
+  SELECT (total_ratio/property_num) as ratio, town 
+  FROM (
+       SELECT SUM(sales_ratio) as total_ratio, COUNT(*) as property_num, town 
+       FROM sales_listing GROUP BY town) 
+  as ratio_table 
+  GROUP BY town ORDER BY ratio DESC;
+  ```
+* The maximum sales ratio by property type is 2.31%% for Other, and 1.65% for Condo
+  The minimum sales ratio by property type is 0.79% for Four Family
+  ```
+  SELECT (total_ratio/property_num) as ratio, property_type 
+  FROM (
+       SELECT SUM(sales_ratio) as total_ratio, COUNT(*) as property_num, property_type 
+       FROM sales_listing GROUP BY property_type) 
+  as ratio_table 
+  GROUP BY property_type ORDER BY ratio DESC;
+  ```
