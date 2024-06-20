@@ -38,10 +38,14 @@ The company I'm, a data analyst, decided to enter the real estate investment in 
 11. Years Until Sold: This remains ambiguous due the lack of information on the data source description. However, I assumed that it is the number of year between the recorded year and the listing year
 
 #### Data Overview
-* There are 168 distinct towns in the dataset
+At first glance, this data includes:
+* 168 distinct towns in the dataset
   ```
             SELECT COUNT(DISTINCT town) FROM sales_listing;
   ```
   
-* 
+* 5 property types: Single Family, Two Family, Three Family, Four Family, Condo, and Other
+  ```
+  SELECT COUNT(DISTINCT property_type) FROM sales_listing;
+```
 
