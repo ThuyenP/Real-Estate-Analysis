@@ -104,4 +104,18 @@ Noticable problem within the dataset:
   ```
   SELECT COUNT(property_type) AS total_prop, town FROM sales_listing GROUP BY town ORDER BY total_prop;
   ```
-  
+
+#### PowerBI Dashboard
+1. Step 1: Create Listing Trend for Housing by Year sarting from 2011 to 2019
+   ![image](https://github.com/ThuyenP/Real-Estate-Analysis/assets/57400761/cb763f6f-ae3d-4f99-9635-afb229bf2c24)
+   
+
+2. Step 2: Create line and clustered column chart to compare average assessed value with average sale value by property type and visualize the average sale ratio for each property type
+   ![image](https://github.com/ThuyenP/Real-Estate-Analysis/assets/57400761/df17c3c8-55fb-4597-ad7d-61cd406fa95f)
+
+3. Step 3: Create clustered bar chart to compare average assessed value with average sale value by town
+   ![image](https://github.com/ThuyenP/Real-Estate-Analysis/assets/57400761/561a59f0-40da-4d89-b905-de6288177188)
+
+
+
+
