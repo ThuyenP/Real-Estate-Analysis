@@ -122,7 +122,7 @@ Noticable problem within the dataset:
 
 6. Step 5: Create clustered column chart to show case top 5 towns with the least profit
  
-  ![image](https://github.com/ThuyenP/Real-Estate-Analysis/assets/57400761/31c469b6-e723-4707-bd88-6dcc347259ce)
+   ![image](https://github.com/ThuyenP/Real-Estate-Analysis/assets/57400761/31c469b6-e723-4707-bd88-6dcc347259ce)
 
 6. Step 6: Create clustered bar chart to show case top 3 towns with the most listings
   ![image](https://github.com/ThuyenP/Real-Estate-Analysis/assets/57400761/8c0f3991-a941-43e6-8e38-c5b6d2b3b626)
