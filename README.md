@@ -80,9 +80,11 @@ At first glance, this data includes:
   ```
 * There is no null or missing value in the dataset. This was verified by checking valid assessed amount and sale amount (non-negative value and non-null value) and assessing non-null value in every column
   ```
-  # Process for all column name in the table
+  # Proceed for all column name in the table
   SELECT [column_name] FROM sales_listing WHERE [column_name] IS NULL;
-  
+
+  SELECT * FROM sales_listing WHERE assessed_amount < 0;
+  SELECT * FROM sales_listing WHERE sale_amount < 0;
   ```
 Noticable problem within the dataset:
 * The sales_ratio in the original dataset was miscalculated - the value was calculated by assessed_amount / sales_amount. The addressed this problem, I drop the column and add a new column for the sales_ratio where the value is sales_amount / assessed_amount
