@@ -25,5 +25,23 @@ The company I'm, a data analyst, decided to enter the real estate investment in 
 ### Data Analysis Report
 #### Data Inspection 
 ##### Data Field Explanation
+1. RowNum: Enumerate each row
+2. Serial Number: The serial number being assigned to each property
+3. Listing Year: The year the property being posted
+4. Date Recorded: The date the property being recorded and added to the dataset
+5. Town: The town the property is located
+6. Home Address: The address of the property
+7. Assessed Value: The assessed value of the property
+8. Sale Amount: The sale value of the property when saled
+9. Sales Ratio: The ratio between the sale amount and the assessed value
+10. Property Type: The type of the property, which is one of the 5 types: Single Family, Two Family, Three Family, Four Family, Condo, and Other
+11. Years Until Sold: This remains ambiguous due the lack of information on the data source description. However, I assumed that it is the number of year between the recorded year and the listing year
 
+#### Data Overview
+* There are 168 distinct towns in the dataset
+  ```
+            SELECT COUNT(DISTINCT town) FROM sales_listing;
+  ```
+  
+* 
 
