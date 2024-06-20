@@ -78,3 +78,14 @@ At first glance, this data includes:
   as ratio_table 
   GROUP BY property_type ORDER BY ratio DESC;
   ```
+Noticable problem within the dataset:
+* The sales_ratio in the original dataset was miscalculated - the value was calculated by assessed_amount / sales_amount. The addressed this problem, I drop the column and add a new column for the sales_ratio where the value is sales_amount / assessed_amount
+  ```
+  ALTER TABLE sales_listing DROP COLUMN sales_ratio;
+  ALTER TABLE sales_listing ADD sales_ratio NUMERIC(20, 4) generated always AS (sale_amount/assessed_value);
+  ```
+* There is an imbalanced number of report for house listing in 2009 and 2010 compared to other years (2011 - 2019). In particular, there are 35179 listings in 2009 and 5295 listings in 2010, while there are less than 200 listings in the remaining years (2011 - 2019)
+  ```
+  SELECT COUNT(*) as total, list_year FROM sales_listing GROUP BY list_year;
+  ```
+  ![image](https://github.com/ThuyenP/Real-Estate-Analysis/assets/57400761/a73a2018-ec9f-447c-a1f0-a9695f8b83d3)
