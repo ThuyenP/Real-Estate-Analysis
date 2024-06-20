@@ -5,12 +5,12 @@
 ### Problem Statement
 Inspired by the Real Estate Sales Dataset by Muhammad Rizqi on Kaggle, I turned the dataset into the data source for an imaginative real estate business problem. Here, I am in the role of a data analyst analyzing the data to report the revenue and loss on real estate business, and suggest data-driven future investment advice to the business team. 
 
-#### Problem Situation
+### Problem Situation
 The company I'm, a data analyst, decided to enter the real estate investment in Connecticut and wanted to know which area should they invest in to gain the most profit. Additionally, the business manager just obtained a real estate dataset from a trusted realtor in the state. The business team thus asked the analytic team to analyze the dataset and help them with making data-driven decision on the investment. In particular, they want to know:                                                                      
 - Amount of houses being listed from 2009 to 2019
 - Top 5 most profit area
 - Top 5 least profit area
 - Overall comparison between average sale amount vs. assessed amount based on the area and the house type
 
-#### Data Analysis Process
+### Data Analysis Process
 
