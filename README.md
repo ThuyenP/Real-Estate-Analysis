@@ -116,6 +116,22 @@ Noticable problem within the dataset:
 3. Step 3: Create clustered bar chart to compare average assessed value with average sale value by town
    ![image](https://github.com/ThuyenP/Real-Estate-Analysis/assets/57400761/561a59f0-40da-4d89-b905-de6288177188)
 
+4. Step 4: Create clustered column chart to show case top 5 towns with the most profit
+  ![image](https://github.com/ThuyenP/Real-Estate-Analysis/assets/57400761/3f91ac8b-4073-4326-86f2-3982001984e9)
+
+5. Step 5: Create clustered column chart to show case top 5 towns with the least profit
+  ![image](https://github.com/ThuyenP/Real-Estate-Analysis/assets/57400761/31c469b6-e723-4707-bd88-6dcc347259ce)
+
+6. Step 6: Create clustered bar chart to show case top 3 towns with the most listings
+  ![image](https://github.com/ThuyenP/Real-Estate-Analysis/assets/57400761/8c0f3991-a941-43e6-8e38-c5b6d2b3b626)
+
+7. Step 7: Create clustered bar chart to show case top 3 property type with the best sale ratio
+   ![image](https://github.com/ThuyenP/Real-Estate-Analysis/assets/57400761/3033fe6f-f07f-4c5a-a0fb-79215508c88b)
+
+8. Step 8: Add in filtered by town and year for easy access on data visualization
+   ![image](https://github.com/ThuyenP/Real-Estate-Analysis/assets/57400761/0a0bd40d-2d7d-4c40-b72f-65514046a681)
+
+
 
 
 
