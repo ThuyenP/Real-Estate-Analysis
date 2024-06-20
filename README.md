@@ -22,4 +22,8 @@ The company I'm, a data analyst, decided to enter the real estate investment in 
 7. Step 7: Build dashboard
 8. Step 8: Report and suggest data-driven recommendation
 
+### Data Analysis Report
+#### Data Inspection 
+##### Data Field Explanation
+
 
