@@ -78,6 +78,12 @@ At first glance, this data includes:
   as ratio_table 
   GROUP BY property_type ORDER BY ratio DESC;
   ```
+* There is no null or missing value in the dataset. This was verified by checking valid assessed amount and sale amount (non-negative value and non-null value) and assessing non-null value in every column
+  ```
+  # Process for all column name in the table
+  SELECT [column_name] FROM sales_listing WHERE [column_name] IS NULL;
+  
+  ```
 Noticable problem within the dataset:
 * The sales_ratio in the original dataset was miscalculated - the value was calculated by assessed_amount / sales_amount. The addressed this problem, I drop the column and add a new column for the sales_ratio where the value is sales_amount / assessed_amount
   ```
@@ -91,4 +97,9 @@ Noticable problem within the dataset:
   ![image](https://github.com/ThuyenP/Real-Estate-Analysis/assets/57400761/a73a2018-ec9f-447c-a1f0-a9695f8b83d3)
   
   This could lead to inaccurate analysis and report. My recommendation is discussing this with the business team and the realtor from whom the dataset was obtained. Meanwhile, I would proceed the analysis with only years from 2011 to 2019 to avoid skewed visualization and inaccuracy.
+  
+* There are areas that have less than 10 listings while some areas have more than 200 listings. This could also a potential reason that leads to skwed visualizationa dn inaccuracy in analysis.
+  ```
+  SELECT COUNT(property_type) as total_prop, town FROM sales_listing GROUP BY town ORDER BY total_prop;
+  ```
   
