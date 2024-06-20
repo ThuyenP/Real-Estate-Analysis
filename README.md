@@ -13,4 +13,13 @@ The company I'm, a data analyst, decided to enter the real estate investment in 
 - Overall comparison between average sale amount vs. assessed amount based on the area and the house type
 
 ### Data Analysis Process
+1. Step 1: Load the dataset into MySQL to analyze and inspect the data using SQL
+2. Step 2: Inspect the dataset for abnormal data, mismatched calculation, and invalid value in the dataset
+3. Step 3: Clean the dataset for accuracy and appropriate meter for latter analysis. This include convert appropriate data type for date_recorded and recalculate sales_ratio for accuracy
+4. Step 4: Evaluate the dataset for maxima, minima, mean, and count of appropriate field
+5. Step 5: Link the dataset to PowerBI to visualizing data
+6. Step 6: Transform data and add on measure field for data visualization
+7. Step 7: Build dashboard
+8. Step 8: Report and suggest data-driven recommendation
+
 
