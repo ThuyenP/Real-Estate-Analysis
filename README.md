@@ -89,5 +89,6 @@ Noticable problem within the dataset:
   SELECT COUNT(*) as total, list_year FROM sales_listing GROUP BY list_year;
   ```
   ![image](https://github.com/ThuyenP/Real-Estate-Analysis/assets/57400761/a73a2018-ec9f-447c-a1f0-a9695f8b83d3)
+  
   This could lead to inaccurate analysis and report. My recommendation is discussing this with the business team and the realtor from whom the dataset was obtained. Meanwhile, I would proceed the analysis with only years from 2011 to 2019 to avoid skewed visualization and inaccuracy.
   
