@@ -61,21 +61,21 @@ At first glance, this data includes:
 * The maximum sales ratio by town is 7.18% in Morris, CT
   The minimum sales ratio by town is 0.79%  in Woodbridge, CT
   ```
-  SELECT (total_ratio/property_num) as ratio, town 
+  SELECT (total_ratio/property_num) AS ratio, town 
   FROM (
-       SELECT SUM(sales_ratio) as total_ratio, COUNT(*) as property_num, town 
+       SELECT SUM(sales_ratio) AS total_ratio, COUNT(*) AS property_num, town 
        FROM sales_listing GROUP BY town) 
-  as ratio_table 
+  AS ratio_table 
   GROUP BY town ORDER BY ratio DESC;
   ```
 * The maximum sales ratio by property type is 2.31%% for Other, and 1.65% for Condo
   The minimum sales ratio by property type is 0.79% for Four Family
   ```
-  SELECT (total_ratio/property_num) as ratio, property_type 
+  SELECT (total_ratio/property_num) AS ratio, property_type 
   FROM (
-       SELECT SUM(sales_ratio) as total_ratio, COUNT(*) as property_num, property_type 
+       SELECT SUM(sales_ratio) AS total_ratio, COUNT(*) AS property_num, property_type 
        FROM sales_listing GROUP BY property_type) 
-  as ratio_table 
+  AS ratio_table 
   GROUP BY property_type ORDER BY ratio DESC;
   ```
 * There is no null or missing value in the dataset. This was verified by checking valid assessed amount and sale amount (non-negative value and non-null value) and assessing non-null value in every column
@@ -90,11 +90,11 @@ Noticable problem within the dataset:
 * The sales_ratio in the original dataset was miscalculated - the value was calculated by assessed_amount / sales_amount. The addressed this problem, I drop the column and add a new column for the sales_ratio where the value is sales_amount / assessed_amount
   ```
   ALTER TABLE sales_listing DROP COLUMN sales_ratio;
-  ALTER TABLE sales_listing ADD sales_ratio NUMERIC(20, 4) generated always AS (sale_amount/assessed_value);
+  ALTER TABLE sales_listing ADD sales_ratio NUMERIC(20, 4) GENERATED ALWAYS AS (sale_amount/assessed_value);
   ```
 * There is an imbalanced number of report for house listing in 2009 and 2010 compared to other years (2011 - 2019). In particular, there are 35179 listings in 2009 and 5295 listings in 2010, while there are less than 200 listings in the remaining years (2011 - 2019)
   ```
-  SELECT COUNT(*) as total, list_year FROM sales_listing GROUP BY list_year;
+  SELECT COUNT(*) AS total, list_year FROM sales_listing GROUP BY list_year;
   ```
   ![image](https://github.com/ThuyenP/Real-Estate-Analysis/assets/57400761/a73a2018-ec9f-447c-a1f0-a9695f8b83d3)
   
@@ -102,6 +102,6 @@ Noticable problem within the dataset:
   
 * There are areas that have less than 10 listings while some areas have more than 200 listings. This could also a potential reason that leads to skwed visualizationa dn inaccuracy in analysis.
   ```
-  SELECT COUNT(property_type) as total_prop, town FROM sales_listing GROUP BY town ORDER BY total_prop;
+  SELECT COUNT(property_type) AS total_prop, town FROM sales_listing GROUP BY town ORDER BY total_prop;
   ```
   
