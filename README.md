@@ -41,11 +41,20 @@ The company I'm, a data analyst, decided to enter the real estate investment in 
 At first glance, this data includes:
 * 168 distinct towns in the dataset
   ```
-            SELECT COUNT(DISTINCT town) FROM sales_listing;
+  SELECT COUNT(DISTINCT town) FROM sales_listing;
   ```
   
 * 5 property types: Single Family, Two Family, Three Family, Four Family, Condo, and Other
   ```
   SELECT COUNT(DISTINCT property_type) FROM sales_listing;
-```
-
+  ```
+  For each property, we have the number of listings as followed:
+    * Four Family property type has 173 listings
+    * Three Family property type has 1160 listings
+    * Two Family property type has 2096 listings
+    * Single Family propoerty type has 26203 listings
+    * Condo property type has 7699 listings
+    * Other property type has 3945 listings
+  ```
+  SELECT COUNT(*) as typeNum, property_type FROM sales_listing GROUP BY property_type ORDER BY typeNum;
+  ```
